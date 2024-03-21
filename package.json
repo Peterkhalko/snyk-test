@@ -24,7 +24,8 @@
     "docker:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up",
     "docker:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up",
     "docker:test": "docker-compose -f docker-compose.yml -f docker-compose.test.yml up",
-    "prepare": "husky install"
+    "prepare": "yarn run snyk-protect && husky install",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [
     "node",
@@ -49,7 +50,7 @@
     "prettier"
   ],
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^1.6.4",
     "bcryptjs": "^2.4.3",
     "blob": "^0.1.0",
     "compression": "^1.7.4",
@@ -61,13 +62,13 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
-    "express-jwt": "^6.0.0",
+    "express-jwt": "^8.0.0",
     "express-jwt-authz": "^2.4.1",
     "express-mongo-sanitize": "^2.0.0",
     "express-rate-limit": "^5.0.0",
     "file-type": "^16.5.3",
     "firebase": "^9.1.0",
-    "firebase-admin": "^9.12.0",
+    "firebase-admin": "^11.4.1",
     "form-data": "^4.0.0",
     "fs": "0.0.1-security",
     "generate-password": "^1.6.1",
@@ -75,7 +76,7 @@
     "helmet": "^4.1.0",
     "http-status": "^1.4.0",
     "joi": "^17.3.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "jwks-rsa": "^2.0.4",
     "moment": "^2.24.0",
     "mongoose": "^5.7.7",
@@ -85,7 +86,7 @@
     "node-fetch": "^2.6.2",
     "node-url-shortener": "^2.0.0",
     "nodemailer": "^6.3.1",
-    "passport": "^0.4.0",
+    "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",
     "pm2": "^5.1.0",
     "request": "^2.88.2",
@@ -96,7 +97,8 @@
     "winston": "^3.2.1",
     "xlsx": "^0.17.3",
     "xss-clean": "^0.1.1",
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.10",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "coveralls": "^3.0.7",
@@ -116,5 +118,6 @@
     "nodemon": "^2.0.12",
     "prettier": "^2.0.5",
     "supertest": "^6.0.1"
-  }
+  },
+  "snyk": true
 }
