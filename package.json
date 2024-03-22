@@ -49,7 +49,7 @@
     "prettier"
   ],
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^0.28.0",
     "bcryptjs": "^2.4.3",
     "blob": "^0.1.0",
     "compression": "^1.7.4",
