@@ -88,9 +88,12 @@
     "swagger-ui-express": "^4.1.6",
     "validator": "^13.0.0",
     "winston": "^3.2.1",
-    "xlsx": "^0.17.3",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.1/xlsx-0.20.1.tgz",
     "xss-clean": "^0.1.1",
     "yarn": "^1.22.10"
+  },
+  "resolutions": {
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.1/xlsx-0.20.1.tgz"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
